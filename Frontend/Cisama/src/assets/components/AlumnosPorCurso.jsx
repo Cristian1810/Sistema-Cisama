@@ -19,7 +19,7 @@ export default function AlumnosPorCurso({ cursoId }) {
   useEffect(() => {
     if (cursoId && visible) {
       const token = localStorage.getItem('token');
-      fetch(`http://localhost:3000/estudiantes`, {
+      fetch(`https://sistema-cisama-552k.onrender.com/estudiantes`, {
         headers: {
           'Content-Type': 'application/json',
           ...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -37,7 +37,7 @@ export default function AlumnosPorCurso({ cursoId }) {
     if (!window.confirm('¿Seguro que deseas eliminar este alumno?')) return;
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3000/estudiantes/${id}`, {
+      const response = await fetch(`https://sistema-cisama-552k.onrender.com/estudiantes/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export default function AlumnosPorCurso({ cursoId }) {
   const handleSaveEditAlumno = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:3000/estudiantes/${editAlumno.id}`, {
+      const response = await fetch(`https://sistema-cisama-552k.onrender.com/estudiantes/${editAlumno.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

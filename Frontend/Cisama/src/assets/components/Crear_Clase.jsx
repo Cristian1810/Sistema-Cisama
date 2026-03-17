@@ -40,7 +40,7 @@ export default function Crear_Clase({ onGuardar, claseEdit }) {
 	// Obtener cursos al cargar
 	useEffect(() => {
 		const token = localStorage.getItem('token');
-		fetch('http://localhost:3000/cursos', {
+		fetch('https://sistema-cisama-552k.onrender.com/cursos', {
 			headers: {
 				'Content-Type': 'application/json',
 				...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -71,7 +71,7 @@ export default function Crear_Clase({ onGuardar, claseEdit }) {
 	useEffect(() => {
 		if (form.curso_id && form.horaEntrada && form.horaSalida) {
 			const token = localStorage.getItem('token');
-			fetch('http://localhost:3000/estudiantes', {
+			fetch('https://sistema-cisama-552k.onrender.com/estudiantes', {
 				headers: {
 					'Content-Type': 'application/json',
 					...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -147,7 +147,7 @@ export default function Crear_Clase({ onGuardar, claseEdit }) {
 				curso_id: Number(form.curso_id)
 			};
 			const token = localStorage.getItem('token');
-			const url = claseEdit && claseEdit.id ? `http://localhost:3000/clases/${claseEdit.id}` : 'http://localhost:3000/clases';
+			const url = claseEdit && claseEdit.id ? `https://sistema-cisama-552k.onrender.com/clases/${claseEdit.id}` : 'https://sistema-cisama-552k.onrender.com/clases';
 			const method = claseEdit && claseEdit.id ? 'PUT' : 'POST';
 			const response = await fetch(url, {
 				method,

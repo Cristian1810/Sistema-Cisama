@@ -18,7 +18,7 @@ export default function Crear_Curso({ onCrearCurso, cursosCreados }) {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('http://localhost:3000/usuarios', {
+    fetch('https://sistema-cisama-552k.onrender.com/usuarios', {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -50,7 +50,7 @@ export default function Crear_Curso({ onCrearCurso, cursosCreados }) {
       setSuccessMsg("");
       return;
     }
-    fetch('http://localhost:3000/cursos', {
+    fetch('https://sistema-cisama-552k.onrender.com/cursos', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(curso)

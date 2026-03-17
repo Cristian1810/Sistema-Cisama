@@ -25,7 +25,7 @@ export default function Registro_de_Estudiantes() {
        // Obtener cursos al montar
 	       useEffect(() => {
 		       const token = localStorage.getItem('token');
-		       fetch('http://localhost:3000/cursos', {
+			   fetch('https://sistema-cisama-552k.onrender.com/cursos', {
 		         headers: {
 		           'Content-Type': 'application/json',
 		           ...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -46,7 +46,7 @@ export default function Registro_de_Estudiantes() {
        const handleSubmit = e => {
        e.preventDefault();
 		   const token = localStorage.getItem('token');
-		   fetch('http://localhost:3000/estudiantes', {
+		   fetch('https://sistema-cisama-552k.onrender.com/estudiantes', {
 	       method: 'POST',
 	       headers: {
 	         'Content-Type': 'application/json',

@@ -16,7 +16,7 @@ export default function Login({ setUser }) {
             return;
         }
             try {
-                const response = await fetch('http://localhost:3000/login', {
+                const response = await fetch('https://sistema-cisama-552k.onrender.com/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),

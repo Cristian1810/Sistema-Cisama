@@ -3,6 +3,9 @@ const app = express();
 const PORT = 3000;
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
+app.use(cors({
+  origin: 'https://sistema-cisama.vercel.app',
+}));
 app.use(cors());
 
 // Limitar a 100 peticiones por IP cada 15 minutos
