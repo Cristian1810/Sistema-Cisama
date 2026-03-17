@@ -1,0 +1,64 @@
+/* ...existing code... */
+.crear-curso-outer {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e3f2fd 80%, #fff 100%);
+  padding: 0;
+}
+
+.crear-curso-container {
+  background: linear-gradient(135deg, #fff 80%, #e3f2fd 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.12);
+  padding: 36px 32px 28px 32px;
+  margin-bottom: 32px;
+  max-width: 520px;
+  width: 100%;
+}
+
+.crear-curso-form {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+  padding: 24px 18px 18px 18px;
+  margin-bottom: 24px;
+}
+
+.crear-curso-form .form-label {
+  color: #1976d2;
+  font-weight: 500;
+}
+
+.crear-curso-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #b3c2d6;
+  background: #f7fafc;
+  font-size: 1rem;
+  padding: 12px;
+  margin-bottom: 18px;
+  transition: border-color 0.2s;
+}
+.crear-curso-form .form-control:focus {
+  border-color: #1976d2;
+  outline: none;
+}
+
+.crear-curso-form .btn-primary {
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+  background: linear-gradient(90deg, #1976d2 80%, #64b5f6 100%);
+  border: none;
+  font-weight: bold;
+  margin-top: 18px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.crear-curso-form .btn-primary:hover {
+  background: linear-gradient(90deg, #1565c0 80%, #1976d2 100%);
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+}
+/* ...existing code... */

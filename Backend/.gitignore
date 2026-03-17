@@ -1,0 +1,11 @@
+# Ignorar archivos de entorno y otros archivos sensibles
+.env
+.env.*
+# Node modules
+node_modules/
+# Archivos de log
+*.log
+# Salidas de npm
+npm-debug.log*
+# Salidas de depuración
+.DS_Store

@@ -1,0 +1,163 @@
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.363); /* Solo sobre la imagen de fondo */
+	z-index: -1;
+	pointer-events: none;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	/* background: url('/img/Plantilla.jpg') repeat center center fixed, #fff; */
+	background-size: contain;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-container {
+	display: flex;
+	width: 700px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+	border-radius: 12px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.login-logo-section {
+	flex: 1;
+	background: #042b97; /* Amarillo */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-form-section {
+	flex: 2;
+	padding: 40px 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: #000; 
+}
+
+.login-form-section h2 {
+	margin-bottom: 24px;
+	text-align: center;
+	color: #333;
+}
+
+.login-input-group label {
+	display: block;
+	margin-bottom: 6px;
+	color: #1976d2;
+}
+
+.login-input-group input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 6px;
+	border: 1px solid #ccc;
+}
+
+
+.login-register-btn {
+	width: 100%;
+	padding: 12px;
+	border-radius: 6px;
+	background: #1976d2;
+	color: #fff;
+	border: none;
+	font-weight: bold;
+	font-size: 16px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.login-container {
+	display: flex;
+	width: 700px;
+	max-width: 95vw;
+	box-shadow: 0 8px 32px rgba(25, 118, 210, 0.18), 0 1.5px 6px rgba(0,0,0,0.08);
+	border-radius: 24px;
+	background: rgba(255,255,255,0.92);
+	overflow: hidden;
+	border: 1px solid #e3f2fd;
+	transition: box-shadow 0.3s;
+}
+
+.login-logo-section {
+	flex: 1;
+	background: linear-gradient(135deg, #ffe066 60%, #fffbe7 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #e3f2fd;
+}
+
+.login-form-section {
+	flex: 2;
+	padding: 48px 36px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: linear-gradient(135deg, #e3f2fd 80%, #fff 100%);
+}
+
+.login-form-section h2 {
+	margin-bottom: 40px;
+	font-size: 2.2rem;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	color: #1976d2;
+	text-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+	text-align: center;
+}
+
+.login-form .mb-4 {
+	margin-bottom: 32px !important;
+}
+
+.login-form button {
+	margin-top: 24px !important;
+	font-size: 1.1rem;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+	background: linear-gradient(90deg, #1976d2 80%, #64b5f6 100%);
+	border: none;
+	transition: background 0.2s, box-shadow 0.2s;
+}
+.login-form button:hover {
+	background: linear-gradient(90deg, #1565c0 80%, #1976d2 100%);
+	box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18);
+}
+
+.login-input-group label {
+	display: block;
+	margin-bottom: 6px;
+	color: #111;
+	font-weight: 500;
+	font-size: 1.05rem;
+}
+
+.login-input-group input,
+.login-form .form-control {
+	width: 100%;
+	padding: 12px;
+	border-radius: 10px;
+	border: 1px solid #b3c2d6;
+	font-size: 1rem;
+	background: #f7fafc;
+	transition: border-color 0.2s;
+}
+.login-input-group input:focus,
+.login-form .form-control:focus {
+	border-color: #1976d2;
+	outline: none;
+}

@@ -1,0 +1,105 @@
+.cursos-creados-container {
+  background: #f7f9fa;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.10);
+  padding: 36px 48px;
+  max-width: 1200px;
+  margin: 48px auto;
+}
+.cursos-creados-titulo {
+  color: #1976d2;
+  font-weight: 700;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.cursos-creados-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.cursos-creados-card {
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s;
+  min-height: 380px;
+}
+.cursos-creados-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+.cursos-creados-body {
+  flex: 1;
+  width: 100%;
+  padding: 24px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cursos-creados-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.cursos-creados-input {
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 4px 8px;
+  width: 70%;
+  font-size: 1.1rem;
+  color: #333;
+}
+.cursos-creados-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+  justify-content: center;
+}
+.btn {
+  border-radius: 8px;
+  font-weight: bold;
+  padding: 8px 18px;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+.btn-primary {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover {
+  background: #1565c0;
+}
+.btn-success {
+  background: #388e3c;
+  color: #fff;
+  border: none;
+}
+.btn-success:hover {
+  background: #2e7d32;
+}
+.btn-danger {
+  background: #d32f2f;
+  color: #fff;
+  border: none;
+}
+.btn-danger:hover {
+  background: #b71c1c;
+}
+.btn-dark {
+  background: #333;
+  color: #fff;
+  border: none;
+}
+.btn-dark:hover {
+  background: #111;
+}

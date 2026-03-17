@@ -1,0 +1,53 @@
+.animate-main {
+	animation: fadeInMain 1.1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+@keyframes fadeInMain {
+	0% {
+		opacity: 0;
+		transform: translateY(40px) scale(0.98);
+	}
+	80% {
+		opacity: 1;
+		transform: translateY(-8px) scale(1.01);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+.animate-title {
+	animation: fadeInTitle 1.2s 0.2s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+@keyframes fadeInTitle {
+	0% {
+		opacity: 0;
+		letter-spacing: 0.2em;
+		filter: blur(4px);
+	}
+	80% {
+		opacity: 1;
+		letter-spacing: 0.05em;
+		filter: blur(0.5px);
+	}
+	100% {
+		opacity: 1;
+		letter-spacing: 0.01em;
+		filter: blur(0);
+	}
+}
+
+.animate-subtitle {
+	animation: fadeInSubtitle 1.2s 0.5s cubic-bezier(.68,-0.55,.27,1.55) both;
+}
+@keyframes fadeInSubtitle {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
