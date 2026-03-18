@@ -62,7 +62,7 @@ export default function Perfil({ onLogout }) {
         datos.password = perfil.password;
       }
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://sistema-cisama-552k.onrender.com/usuarios/${perfil.id || ''}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios/${perfil.id || ''}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

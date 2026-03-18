@@ -25,7 +25,7 @@ export default function Cursos_Creados({ search = "" }) {
 
   const fetchCursos = () => {
     const token = localStorage.getItem('token');
-    fetch('https://sistema-cisama-552k.onrender.com/cursos', {
+    fetch(`${process.env.REACT_APP_API_URL}/cursos`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ export default function Cursos_Creados({ search = "" }) {
     try {
       const curso = editCurso;
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://sistema-cisama-552k.onrender.com/cursos/${curso.id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/cursos/${curso.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export default function Cursos_Creados({ search = "" }) {
     setLoading(true);
     const curso = cursos[deleteIdx];
     try {
-      const response = await fetch(`https://sistema-cisama-552k.onrender.com/cursos/${curso.id}`, {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/cursos/${curso.id}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
       });
@@ -142,7 +142,7 @@ export default function Cursos_Creados({ search = "" }) {
     const curso = cursos[idx];
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://sistema-cisama-552k.onrender.com/cursos/${curso.id}/desactivar`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/cursos/${curso.id}/desactivar`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ export default function Cursos_Creados({ search = "" }) {
     const curso = cursos[idx];
     try {
       const token = localStorage.getItem('token');
-      await fetch(`https://sistema-cisama-552k.onrender.com/cursos/${curso.id}/reactivar`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/cursos/${curso.id}/reactivar`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

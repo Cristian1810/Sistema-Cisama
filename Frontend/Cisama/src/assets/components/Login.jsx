@@ -16,7 +16,7 @@ export default function Login({ setUser }) {
             return;
         }
             try {
-                const response = await fetch('https://sistema-cisama-552k.onrender.com/login', {
+                const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),

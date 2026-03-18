@@ -48,8 +48,9 @@ export default function AppContent() {
 
 	const handleGuardarClase = async (clase) => {
 		const token = localStorage.getItem('token');
+		const API_URL = process.env.REACT_APP_API_URL;
 		if (editClaseId) {
-			await fetch(`https://sistema-cisama-552k.onrender.com/clases/${editClaseId}`, {
+			await fetch(`${API_URL}/clases/${editClaseId}`, {
 				method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json',
@@ -59,7 +60,7 @@ export default function AppContent() {
 			});
 			setEditClaseId(null);
 		} else {
-			await fetch('https://sistema-cisama-552k.onrender.com/clases', {
+			await fetch(`${API_URL}/clases`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -82,8 +83,9 @@ export default function AppContent() {
 
 	const fetchClases = async () => {
 		const token = localStorage.getItem('token');
+		const API_URL = process.env.REACT_APP_API_URL;
 		try {
-			const res = await fetch('https://sistema-cisama-552k.onrender.com/clases', {
+			const res = await fetch(`${API_URL}/clases`, {
 				headers: {
 					'Authorization': `Bearer ${token}`
 				}
@@ -115,7 +117,8 @@ export default function AppContent() {
 	const handleDeleteClase = async (idx) => {
 		const id = clases[idx].id;
 		const token = localStorage.getItem('token');
-		await fetch(`https://sistema-cisama-552k.onrender.com/clases/${id}`, {
+		const API_URL = process.env.REACT_APP_API_URL;
+		await fetch(`${API_URL}/clases/${id}`, {
 			method: 'DELETE',
 			headers: {
 				'Content-Type': 'application/json',
