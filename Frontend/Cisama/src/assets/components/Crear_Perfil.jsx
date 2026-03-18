@@ -27,7 +27,7 @@ export default function Crear_Perfil() {
   const fetchUsuarios = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/usuarios`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -44,7 +44,7 @@ export default function Crear_Perfil() {
   useEffect(() => {
     fetchUsuarios();
     const token = localStorage.getItem('token');
-    fetch(`${process.env.REACT_APP_API_URL}/cursos`, {
+    fetch(`${import.meta.env.VITE_API_URL}/cursos`, {
       headers: {
         'Content-Type': 'application/json',
         ...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -85,7 +85,7 @@ export default function Crear_Perfil() {
         if (!formToSend.password) {
           delete formToSend.password;
         }
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios/${usuarioEdit.id}`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/usuarios/${usuarioEdit.id}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -108,7 +108,7 @@ export default function Crear_Perfil() {
           return;
         }
         const token = localStorage.getItem('token');
-        const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/usuarios`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ export default function Crear_Perfil() {
     const usuario = usuarios[idx];
     const token = localStorage.getItem('token');
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios/${usuario.id}/disable`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/usuarios/${usuario.id}/disable`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -167,7 +167,7 @@ export default function Crear_Perfil() {
     const usuario = usuarios[idx];
     const token = localStorage.getItem('token');
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios/${usuario.id}/enable`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/usuarios/${usuario.id}/enable`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ export default function Crear_Perfil() {
     }
     const token = localStorage.getItem('token');
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/usuarios/${usuario.id}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/usuarios/${usuario.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

@@ -40,7 +40,7 @@ export default function Crear_Clase({ onGuardar, claseEdit }) {
 	// Obtener cursos al cargar
 	useEffect(() => {
 		const token = localStorage.getItem('token');
-		fetch(`${process.env.REACT_APP_API_URL}/cursos`, {
+		fetch(`${import.meta.env.VITE_API_URL}/cursos`, {
 			headers: {
 				'Content-Type': 'application/json',
 				...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -71,7 +71,7 @@ export default function Crear_Clase({ onGuardar, claseEdit }) {
 	useEffect(() => {
 		if (form.curso_id && form.horaEntrada && form.horaSalida) {
 			const token = localStorage.getItem('token');
-			fetch(`${process.env.REACT_APP_API_URL}/estudiantes`, {
+			fetch(`${import.meta.env.VITE_API_URL}/estudiantes`, {
 				headers: {
 					'Content-Type': 'application/json',
 					...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -147,7 +147,7 @@ export default function Crear_Clase({ onGuardar, claseEdit }) {
 				curso_id: Number(form.curso_id)
 			};
 			const token = localStorage.getItem('token');
-			const url = claseEdit && claseEdit.id ? `${process.env.REACT_APP_API_URL}/clases/${claseEdit.id}` : `${process.env.REACT_APP_API_URL}/clases`;
+			const url = claseEdit && claseEdit.id ? `${import.meta.env.VITE_API_URL}/clases/${claseEdit.id}` : `${import.meta.env.VITE_API_URL}/clases`;
 			const method = claseEdit && claseEdit.id ? 'PUT' : 'POST';
 			const response = await fetch(url, {
 				method,

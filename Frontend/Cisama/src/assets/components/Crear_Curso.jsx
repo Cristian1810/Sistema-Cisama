@@ -18,7 +18,7 @@ export default function Crear_Curso({ onCrearCurso, cursosCreados }) {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch(`${process.env.REACT_APP_API_URL}/usuarios`, {
+    fetch(`${import.meta.env.VITE_API_URL}/usuarios`, {
       headers: {
         'Authorization': `Bearer ${token}`
       }
@@ -50,7 +50,7 @@ export default function Crear_Curso({ onCrearCurso, cursosCreados }) {
       setSuccessMsg("");
       return;
     }
-    fetch(`${process.env.REACT_APP_API_URL}/cursos`, {
+    fetch(`${import.meta.env.VITE_API_URL}/cursos`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(curso)

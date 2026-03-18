@@ -48,7 +48,7 @@ export default function AppContent() {
 
 	const handleGuardarClase = async (clase) => {
 		const token = localStorage.getItem('token');
-		const API_URL = process.env.REACT_APP_API_URL;
+		const API_URL = import.meta.env.VITE_API_URL;
 		if (editClaseId) {
 			await fetch(`${API_URL}/clases/${editClaseId}`, {
 				method: 'PUT',
@@ -83,7 +83,7 @@ export default function AppContent() {
 
 	const fetchClases = async () => {
 		const token = localStorage.getItem('token');
-		const API_URL = process.env.REACT_APP_API_URL;
+		const API_URL = import.meta.env.VITE_API_URL;
 		try {
 			const res = await fetch(`${API_URL}/clases`, {
 				headers: {
@@ -117,7 +117,7 @@ export default function AppContent() {
 	const handleDeleteClase = async (idx) => {
 		const id = clases[idx].id;
 		const token = localStorage.getItem('token');
-		const API_URL = process.env.REACT_APP_API_URL;
+		const API_URL = import.meta.env.VITE_API_URL;
 		await fetch(`${API_URL}/clases/${id}`, {
 			method: 'DELETE',
 			headers: {

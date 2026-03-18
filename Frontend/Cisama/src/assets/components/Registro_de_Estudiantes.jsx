@@ -25,7 +25,7 @@ export default function Registro_de_Estudiantes() {
        // Obtener cursos al montar
 	       useEffect(() => {
 		       const token = localStorage.getItem('token');
-			   fetch(`${process.env.REACT_APP_API_URL}/cursos`, {
+			   fetch(`${import.meta.env.VITE_API_URL}/cursos`, {
 		         headers: {
 		           'Content-Type': 'application/json',
 		           ...(token ? { 'Authorization': `Bearer ${token}` } : {})
@@ -46,7 +46,7 @@ export default function Registro_de_Estudiantes() {
        const handleSubmit = e => {
        e.preventDefault();
 		   const token = localStorage.getItem('token');
-		   fetch(`${process.env.REACT_APP_API_URL}/estudiantes`, {
+		   fetch(`${import.meta.env.VITE_API_URL}/estudiantes`, {
 	       method: 'POST',
 	       headers: {
 	         'Content-Type': 'application/json',
