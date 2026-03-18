@@ -4,13 +4,7 @@ const PORT = 3000;
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'https://sistema-cisama.vercel.app',
-    'https://sistemacisama-13npbzgwg-cristian1810s-projects.vercel.app',
-    'https://sistemacisama-cristian1810s-projects.vercel.app/',
-    'https://sistemacisama-lyox8ba72-cristian1810s-projects.vercel.app'
-  ],
+  origin: ['http://localhost:5173'],
   credentials: true
 }));
 

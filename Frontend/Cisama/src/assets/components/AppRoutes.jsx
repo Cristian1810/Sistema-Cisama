@@ -58,7 +58,6 @@ export default function AppRoutes({ user, clases, handleEditClase, handleDeleteC
           <Crear_Perfil />
         </ProtectedRoute>
       } />
-      <Route path="/admin/cerrar-sesion" element={<Login setUser={setUser} />} />
       {/* Rutas para Profesor/Suplente */}
       <Route path="/profesor/perfil" element={
         <ProtectedRoute user={user} allowedRoles={["profesor", "suplente"]}>
@@ -85,7 +84,7 @@ export default function AppRoutes({ user, clases, handleEditClase, handleDeleteC
           <Clases key={clases.length} clases={clases} onEdit={handleEditClase} onDelete={handleDeleteClase} rol={user?.rol} />
         </ProtectedRoute>
       } />
-      <Route path="/profesor/cerrar-sesion" element={<Login setUser={setUser} />} />
+      {/* Rutas para Profesor/Suplente */}
       <Route path="/" element={<Login setUser={setUser} />} />
       <Route path="*" element={<Error404 />} />
     </Routes>

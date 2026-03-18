@@ -60,49 +60,49 @@ export default function Aside({ rol, onNav, onLogout }) {
               <ul className="nav flex-column w-100">
                 {/* Común para todos */}
                 <li className="nav-item text-center mb-3">
-                  <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('perfil')}>
+                  <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('perfil')}>
                     <i className="bi bi-person-circle fs-2 mb-1"></i>
                     <span>Ver mi perfil</span>
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item text-center mb-3">
-                  <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('main')}>
+                  <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('main')}>
                     <i className="bi bi-house-door fs-2 mb-1"></i>
                     <span>Hogar</span>
-                  </a>
+                  </button>
                 </li>
                 <li className="nav-item text-center mb-3">
-                  <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('registrar')}>
+                  <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('registrar')}>
                     <i className="bi bi-person-plus fs-2 mb-1"></i>
                     <span>Registrar alumno</span>
-                  </a>
+                  </button>
                 </li>
                 {/* Opciones solo para admin */}
                 {rol === 'admin' && (
                   <>
                     <li className="nav-item text-center mb-3">
-                      <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('crearperfil')}>
+                      <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('crearperfil')}>
                         <i className="bi bi-person-gear fs-2 mb-1"></i>
                         <span>Crear usuario</span>
-                      </a>
+                      </button>
                     </li>
                     <li className="nav-item text-center mb-3">
-                      <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('crearcurso')}>
+                      <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('crearcurso')}>
                         <i className="bi bi-plus-circle fs-2 mb-1"></i>
                         <span>Crear curso</span>
-                      </a>
+                      </button>
                     </li>
                     <li className="nav-item text-center mb-3">
-                      <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('cursoscreados')}>
+                      <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('cursoscreados')}>
                         <i className="bi bi-journal-bookmark fs-2 mb-1"></i>
                         <span>Cursos creados</span>
-                      </a>
+                      </button>
                     </li>
                     <li className="nav-item text-center mb-3">
-                      <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('clases')}>
+                      <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('clases')}>
                         <i className="bi bi-list-check fs-2 mb-1"></i>
                         <span>Clases guardadas</span>
-                      </a>
+                      </button>
                     </li>
                   </>
                 )}
@@ -110,25 +110,25 @@ export default function Aside({ rol, onNav, onLogout }) {
                 {(rol === 'profesor' || rol === 'suplente') && (
                   <>
                     <li className="nav-item text-center mb-3">
-                      <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('crearclase')}>
+                      <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('crearclase')}>
                         <i className="bi bi-calendar-plus fs-2 mb-1"></i>
                         <span>Crear Clase</span>
-                      </a>
+                      </button>
                     </li>
                     <li className="nav-item text-center mb-3">
-                      <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={() => handleNavigate('clases')}>
+                      <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={() => handleNavigate('clases')}>
                         <i className="bi bi-list-check fs-2 mb-1"></i>
                         <span>Clases guardadas</span>
-                      </a>
+                      </button>
                     </li>
                   </>
                 )}
                 {/* Cerrar sesión */}
                 <li className="nav-item text-center">
-                  <a className="nav-link text-primary d-flex flex-column align-items-center" href="javascript:void(0)" onClick={onLogout}>
+                  <button type="button" className="nav-link text-primary d-flex flex-column align-items-center" onClick={onLogout}>
                     <i className="bi bi-box-arrow-right fs-2 mb-1"></i>
                     <span>Cerrar Sesión</span>
-                  </a>
+                  </button>
                 </li>
               </ul>
             </nav>
